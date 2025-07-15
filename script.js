@@ -1,13 +1,26 @@
-var val=67;
-let val2=34;
-console.log(val);
+var one   = document.querySelector('#one')
+var two   = document.querySelector('#two')
+var three = document.querySelector('#three')
 
-//console.log("45"==45);
-//console.log("45"===45);
-const prompt=require("prompt-sync")();
+one.addEventListener('mouseover', function(){
 
-let age=prompt("enter the age:");
-let name=prompt("enter the name:");
+one.textContent = "Mouseover currently happening"
+one.style.color = "blue"
 
-console.log(age);
-console.log(name);
+})
+
+one.addEventListener('mouseout',function(){
+  one.textContent = "Hover Over Me"
+  one.style.color = 'black'
+
+})
+
+two.addEventListener('click', function(){
+  two.textContent = "Clicked"
+  two.style.color = 'blue'
+})
+
+three.addEventListener('dblclick',function(){
+  three.textContent = "Double Clicked"
+  three.style.color = 'red'
+})
